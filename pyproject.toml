@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "paperplotlib"
+version = "0.0.0"
+description = "1"
+authors = ["luzhixing12345 <luzhixing12345@163.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/luzhixing12345/paperplotlib"
+documentation = "https://luzhixing12345.github.io/paperplotlib/"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+matplotlib = "^3.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
