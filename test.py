@@ -1,19 +1,11 @@
-import matplotlib.pyplot as plt
+import paperplotlib as ppl
 
-# 数据:X轴的类别标签和Y轴的数值
-categories = ['Category A', 'Category B', 'Category C', 'Category D']
-values = [10, 20, 15, 30]
+x = [2, 4, 8, 16, 32]
+y = [0.1, 0.5, 0.7, 0.9, 1.0]
 
-# 创建一个新的图表
-plt.figure()
+graph = ppl.BarGraph()
+graph.plot(x, y)
+graph.x_label = "The number of data"
+graph.y_label = "Throughput (Mbps)"
 
-# 绘制柱状图
-plt.bar(categories, values)
-
-# 添加标题和轴标签
-plt.title('Simple Bar Chart')
-plt.xlabel('Categories')
-plt.ylabel('Values')
-
-# 显示图表
-plt.show()
+graph.save("test.png")
