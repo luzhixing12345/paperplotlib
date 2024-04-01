@@ -17,7 +17,6 @@ class Graph:
         self.width_picture = False # 是否是宽图
         self.grid = "y"  # 网格线 x | y | xy | None
         self.y_lim: Optional[Tuple[float, float]] = None
-        self.emphasize_index: Optional[int] = None # 柱状图中高亮某一列
         # -- configable --
 
         # 基本属性

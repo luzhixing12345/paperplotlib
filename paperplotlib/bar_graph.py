@@ -37,6 +37,7 @@ class BarGraph(Graph):
         data: 二维列表,每个元素为一组数据
         group_names: 每个组的名称
         column_names: 每一列的名称
+        emphasize_index: 高亮的列索引
         """
         assert np.shape(data) == (len(group_names), len(column_names)), "二维数据应为二维列表"
         if emphasize_index != -1:

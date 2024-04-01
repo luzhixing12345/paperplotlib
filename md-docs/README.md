@@ -33,7 +33,7 @@ graph.y_label = "Throughput (Mbps)"
 graph.save()
 ```
 
-![](https://raw.githubusercontent.com/paperplotlib/master/images/paperplotlib/result.png)
+![](https://raw.githubusercontent.com/luzhixing12345/paperplotlib/master/images/paperplotlib/result.png)
 
 使用文档: [paperplotlib document](https://luzhixing12345.github.io/paperplotlib/)
 
