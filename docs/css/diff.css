@@ -1,0 +1,24 @@
+pre[class*="language-"] {
+    background: #1f1f1f;
+}
+
+pre[class*="language-diff"] .Token {
+    color: #C1CCCC;
+}
+
+pre[class*="language-diff"] .Token.ADD_FILE,
+pre[class*="language-diff"] .Token.SUB_FILE {
+    color: #569cd6;
+}
+
+pre[class*="language-diff"] .Token.TAG_LINE {
+    color: #C586C0;
+}
+
+pre[class*="language-diff"] .Token.ADD_LINE {
+    color: #A2CEA8;
+}
+
+pre[class*="language-diff"] .Token.SUB_LINE {
+    color: #CE9178;
+}

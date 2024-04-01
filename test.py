@@ -3,7 +3,7 @@ import numpy as np
 
 # 随机生成一个 5 x 7 的数据
 a = 5
-b = 7
+b = 8
 y = np.random.randint(10, 100, size=(a, b))
 
 group_names = [f"group {i}" for i in range(a)]

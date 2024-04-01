@@ -1,0 +1,892 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    position: absolute;
+}
+
+
+.markdown-body {
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px 50px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    /* color: #24292e; */
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    word-wrap: break-word;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    background-color: #fff;
+}
+
+.light {
+    background-color: #eee;
+    color: #3c4858;
+}
+
+.dark {
+    background-color: #181c27;
+    color: #c4c6c9;
+}
+
+
+.markdown-light {
+    background-color: #fff;
+}
+
+.markdown-light h1,
+.markdown-light h2,
+.markdown-light h3,
+.markdown-light h4,
+.markdown-light h5,
+.markdown-light h6 {
+    color: #000;
+}
+
+.markdown-light a {
+    color: #0366d6;
+    transition: all 0.8s;
+}
+
+.markdown-light a:hover {
+    color: #30a9de;
+    transition: all 0.8s;
+}
+
+.markdown-dark {
+    background-color: #252d38;
+}
+
+.markdown-dark a {
+    color: #1589e9;
+    transition: all 0.8s;
+}
+
+.markdown-dark a:hover {
+    color: #30a9de;
+    transition: all 0.8s;
+}
+
+.markdown-dark h1,
+.markdown-dark h2,
+.markdown-dark h3,
+.markdown-dark h4,
+.markdown-dark h5,
+.markdown-dark h6 {
+    color: #c4c6c9;
+}
+
+.markdown-body strong {
+    font-weight: inherit;
+    font-weight: bolder;
+}
+
+.markdown-body h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+.markdown-body img {
+    border-style: none;
+}
+
+a {
+    color: rgb(4, 105, 221);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+blockquote {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    font-size: 15px;
+}
+
+.markdown-body strong {
+    font-weight: 600;
+}
+
+.markdown-body hr {
+    height: 0;
+    margin: 25px 0;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #dfe2e5;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+    display: table;
+    content: "";
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body table,
+.markdown-body ul {
+    margin-top: 0;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.markdown-body pre {
+    margin-top: 5px;
+    margin-bottom: 16px;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    /* max-height: 600px; */
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    word-wrap: normal;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    cursor: pointer;
+}
+
+.markdown-body code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27, 31, 35, 0.05);
+    border-radius: 3px;
+}
+
+.markdown-body pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+}
+
+.markdown-body pre code {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: initial;
+    border: 0;
+    cursor: pointer;
+}
+
+
+
+.markdown-body ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* .markdown-body ol ol,
+.markdown-body ul ol {
+    list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+    list-style-type: lower-alpha;
+} */
+
+.markdown-body ul {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+    padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.markdown-body li {
+    word-wrap: break-all;
+}
+
+.markdown-body li>p {
+    margin-top: 16px;
+}
+
+.markdown-body li+li {
+    margin-top: 0.25em;
+}
+
+ul>li>ul>li {
+    margin-top: 10px;
+    /* 通过调整10px来设置上边距大小 */
+}
+
+/* ul 后面的文字加一个间距 */
+.markdown-body>ul~p,
+.markdown-body>ol~p,
+.markdown-body>ul~blockquote,
+.markdown-body>ol~blockquote .markdown-body>ul~pre,
+.markdown-body>ol~pre,
+.markdown-body>ul~a,
+.markdown-body>ol~a {
+    margin-top: 16px;
+}
+
+.markdown-body table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.markdown-body table th {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+.markdown-body table {
+    max-width: 90%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.markdown-dark table tr {
+    background-color: #444444;
+    border-top: 1px solid #c6cbd1;
+    color: white;
+}
+
+.markdown-dark table tr:nth-child(2n) {
+    background-color: #808080;
+    color: white;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.markdown-body>ul>li:has(input) {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.markdown-body ul>li:has(input)>ul {
+    list-style-type: none;
+    padding-left: 8px;
+}
+
+.markdown-body img {
+    max-width: 80%;
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+
+.markdown-body pre {
+    position: relative;
+}
+
+.markdown-body pre #code_copy {
+    position: absolute;
+    display: inline-block;
+    right: 10px;
+    top: 10px;
+    /* margin-top: -16px; */
+    padding: 3px;
+    opacity: 0.9;
+    border: 1px solid rgba(149, 157, 165, 0.2);
+    border-radius: 5px;
+    background-color: rgb(196, 196, 196);
+    z-index: 1;
+}
+
+.markdown-body pre #code_copy:hover {
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+}
+
+.markdown-body ol ul,
+.markdown-body ul ol {
+    padding-left: 1em;
+    margin-top: 10px;
+}
+
+.markdown-body ol li blockquote {
+    margin-top: 10px;
+}
+
+.markdown-body ul li blockquote {
+    margin-top: 10px;
+}
+
+.changeMode {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #e3e3e3;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+
+.change-article {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    border: 0;
+    width: 100%;
+    margin-right: 20%;
+    height: 100px;
+    margin-top: 50px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.change-dark {
+    background-color: #6a737d;
+    color: #f8f9fa;
+}
+
+/* 切换文章按钮 */
+.next-front {
+    position: fixed;
+    right: 6%;
+    top: 60%;
+    width: 10%;
+    /* white-space:nowrap; */
+}
+
+.next-front .change-article:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    transition: all 0.5s;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+
+.next-front .change-article:active {
+    width: 95%;
+    height: 90px;
+}
+
+/* 对目录树的调整 */
+
+.dir-tree::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
+}
+
+.dir-tree {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    position: fixed;
+    left: 6%;
+    top: 10%;
+    width: 10%;
+    max-width: 200px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #f6f8fa;
+    border-radius: 10px;
+    max-height: 80%;
+    overflow: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    text-overflow: ellipsis;
+    /*  过长文字省略号 */
+    white-space: nowrap;
+    /*禁止文字折行*/
+}
+
+.dir-tree ul {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: -10px;
+    list-style: none;
+    position: relative;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+.dir-tree ul li a {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dir-tree ul ul li {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    margin-left: -10px;
+    margin-top: -10px;
+    /* margin-bottom: 10px; */
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    /* padding-right: -10px; */
+}
+
+/* .dir-tree ul ul li:hover {
+  background-color: #eee;
+} */
+
+.dir-tree a {
+    text-decoration: none;
+    color: #000;
+    /* https://www.bilibili.com/video/BV1Dc41147sW */
+    /* background: linear-gradient(to right, #000, #000) no-repeat right bottom;
+    background-size: 0 2px;
+    transition: background-size 1000ms; */
+}
+
+.dir-tree a:hover {
+    font-weight: bold;
+    color: #000;
+    /* background-position-x: left;
+    background-size: 100% 2px; */
+}
+
+.dir-tree ul ul li a {
+    color: #000;
+}
+
+.dir-tree ul ul li a:hover {
+    color: #000;
+}
+
+.link-active {
+    font-weight: bold !important;
+    border-bottom: 2px solid #555;
+    padding-bottom: 2px;
+}
+
+.link-active-dark {
+    font-weight: bold !important;
+    border-bottom: 2px solid #f3f3f3;
+    padding-bottom: 2px;
+}
+
+/* 图片下的文字的样式 */
+
+.markdown-body p>p {
+    color: #a3a1a1;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 100%;
+}
+
+.preview-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    z-index: 200;
+}
+
+#black_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.zood {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10px;
+    /* display: flex; */
+}
+
+.zood a {
+    text-decoration: none;
+    color: grey;
+    /* display: block; */
+}
+
+.zood a:hover {
+    text-decoration: underline;
+}
+
+
+.markdown-body ul:has(input[type="checkbox"]) {
+    list-style-type: none;
+    padding-left: 0.5em;
+    /* margin-bottom: 8px; */
+}
+
+.markdown-body input[type="checkbox"] {
+    margin-right: 0.5em;
+    /* 复选框和文本之间的间距 */
+}
+
+/* 对小标题索引树的调整 */
+
+.header-navigator {
+    display: none;
+    position: fixed;
+    width: 15%;
+    left: 83%;
+    top: 10%;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    text-overflow: ellipsis;
+    /*  过长文字省略号 */
+    white-space: nowrap;
+    /*禁止文字折行*/
+    list-style: none;
+    max-height: 50%;
+    overflow: auto;
+}
+
+.header-navigator::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
+}
+
+.header-navigator a {
+    color: #3c4858;
+    text-decoration: none;
+}
+
+.header-navigator a:hover {
+    font-weight: bolder;
+}
+
+.header-navigator ul {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    list-style: none;
+    position: relative;
+}
+
+.header-navigator ul ul {
+    margin-left: -20px;
+}
+
+.header-navigator a {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+pre[class^="language-"] {
+    background: #1f1f1f;
+    color: white;
+}
+
+
+.lb-loader,
+.lightbox {
+    text-align: center;
+    line-height: 0;
+    position: absolute;
+    left: 0
+}
+
+body.lb-disable-scrolling {
+    overflow: hidden
+}
+
+.lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #000;
+    filter: alpha(Opacity=80);
+    opacity: .8;
+    display: none
+}
+
+.lightbox {
+    width: 100%;
+    z-index: 10000;
+    font-weight: 400;
+    outline: 0
+}
+
+.lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+    border: 4px solid #fff
+}
+
+.lightbox a img {
+    border: none
+}
+
+.lb-outerContainer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #fff
+}
+
+.lb-outerContainer:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.lb-loader {
+    top: 43%;
+    height: 25%;
+    width: 100%
+}
+
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+.lb-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10
+}
+
+.lb-container>.nav {
+    left: 0
+}
+
+.lb-nav a {
+    outline: 0;
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)
+}
+
+.lb-next,
+.lb-prev {
+    height: 100%;
+    cursor: pointer;
+    display: block
+}
+
+.lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    transition: opacity .6s
+}
+
+.lb-nav a.lb-prev:hover {
+    filter: alpha(Opacity=100);
+    opacity: 1
+}
+
+.lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    transition: opacity .6s
+}
+
+.lb-nav a.lb-next:hover {
+    filter: alpha(Opacity=100);
+    opacity: 1
+}
+
+.lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px
+}
+
+.lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.lb-data {
+    padding: 0 4px;
+    color: #ccc
+}
+
+.lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em
+}
+
+.lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1em
+}
+
+.lb-data .lb-caption a {
+    color: #4ae
+}
+
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999
+}
+
+.lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    text-align: right;
+    outline: 0;
+    filter: alpha(Opacity=70);
+    opacity: .7;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s
+}
+
+.lb-data .lb-close:hover {
+    cursor: pointer;
+    filter: alpha(Opacity=100);
+    opacity: 1
+}
+
+/* 对于 phone & ipad 单独适配 */
+
+@media screen and (max-width: 768px) {
+    .dir-tree {
+        display: none;
+    }
+
+    .markdown-body {
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        border-radius: initial;
+    }
+
+    .next-front {
+        position: relative;
+        right: initial;
+        top: initial;
+        width: initial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* right: 4%;
+        width: 5%;
+        top: 60%; */
+    }
+
+    .change-article {
+        margin: initial;
+        border-radius: initial;
+        /* 边框颜色 */
+        border: 1px solid rgba(149, 157, 165, 0.2);
+    }
+
+    .zood {
+        display: none;
+    }
+}

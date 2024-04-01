@@ -1,17 +1,5 @@
 import matplotlib.pyplot as plt
-from typing import List, Optional
-from .color import COLOR
-
-
-def check_dimensions(lst):
-    dimensions = 0
-    while isinstance(lst, list):
-        dimensions += 1
-        if len(lst) == 0:  # 如果子列表为空,则直接跳出循环
-            break
-        lst = lst[0]  # 递归检查子列表
-
-    return dimensions
+from typing import List, Optional, Union, Tuple
 
 
 class Graph:
@@ -22,11 +10,17 @@ class Graph:
     def __init__(self) -> None:
         self.fig = plt.figure(figsize=(8, 4))
         self.ax = self.fig.add_subplot(111)
-        self.x_label: Optional[str] = None
-        self.y_label: Optional[str] = None
+        
+        # -- configable --
+        self.x_label: Optional[str] = None # x轴标签
+        self.y_label: Optional[str] = None # y轴标签
+        self.width_picture = False # 是否是宽图
+        self.grid = "y"  # 网格线 x | y | xy | None
+        self.y_lim: Optional[Tuple[float, float]] = None
+        self.emphasize_index: Optional[int] = None # 柱状图中高亮某一列
+        # -- configable --
 
         # 基本属性
-        self.grid = "y"  # x | y | xy | None
         self.grid_color = "#dedede"  # 网格线颜色
         self.grid_style = "-"  # 网格线类型 - | --
         self.grid_width = 1  # 网格线宽度
@@ -42,11 +36,13 @@ class Graph:
         """
         raise NotImplementedError("请在子类中实现此方法")
 
-    def save(self, path: str = "result.png", wide_picture=False):
+    def save(self, path: str = "result.png"):
         """
         保存图片
         """
         self.check_config()
+        if self.width_picture:
+            self.fig.set_size_inches(16, 4)
         self.ax.set_xlabel(self.x_label)
         self.ax.set_ylabel(self.y_label)
 
@@ -68,6 +64,10 @@ class Graph:
                     alpha=self.grid_alpha,
                 )
             self.ax.set_axisbelow(True)
+        
+        if self.y_lim is not None:
+            self.ax.set_ylim(self.y_lim)
+        
         plt.savefig(path, dpi=self.dpi, bbox_inches=self.bbox_inches)
 
     def check_config(self):
@@ -75,3 +75,4 @@ class Graph:
         检查配置的属性是否设置的合理
         """
         assert self.grid in ["x", "y", "xy", None], "grid 参数值只能是 x | y | xy | None"
+        assert self.width_picture in [True, False], "width_picture 参数值只能是 True | False"

@@ -1,0 +1,86 @@
+pre[class*="language-shell"] {
+    background: #1f1f1f;
+}
+
+pre[class*="language-shell"] .Token {
+    color: #C1CCCC;
+}
+
+pre[class*="language-shell"] .Token.BraceDepth-0 {
+    color: #FFD700;
+}
+
+pre[class*="language-shell"] .Token.BraceDepth-1 {
+    color: #DA70D6;
+}
+
+pre[class*="language-shell"] .Token.BraceDepth-2 {
+    color: #1A9DFF;
+}
+
+pre[class*="language-shell"] .Token.Program,
+pre[class*="language-shell"] .Token.Function,
+pre[class*="language-shell"] .Token.BACK_SLASH {
+    color: #DCDCAA;
+}
+
+
+pre[class*="language-shell"] .Token.STRING {
+    color: #CE9178;
+}
+
+pre[class*="language-shell"] .Token.NUMBER {
+    color: #A2CEA8;
+}
+
+pre[class*="language-shell"] .Token.COMMENT {
+    color: #6A9955;
+}
+
+pre[class*="language-shell"] .Token.Keyword {
+    color: #C586C0;
+}
+
+pre[class*="language-shell"] .Token.OPTION {
+    color: #b3b2b2;
+}
+
+pre[class*="language-shell"] .Token.Variant,
+pre[class*="language-shell"] .Token.VARIANT {
+    color: #88D6FE;
+}
+
+pre[class*="language-shell"] .Token.Format {
+    color: #88D6FE;
+}
+
+pre[class*="language-shell"] .Token.Control {
+    color: --control;
+}
+
+pre[class*="language-shell"] .Token.Url {
+    border-bottom: 1px solid #C1CCCC;
+}
+
+pre[class*="language-shell"] .Token.HOST_NAME {
+    color: #4EC9B0;
+}
+
+pre[class*="language-shell"] .Token.DIR_PATH {
+    color: #569cd6;
+}
+
+/* pre[class*="language-shell"] .Token.TreeNormal {
+    color: #D4D4D4;
+}
+
+pre[class*="language-shell"] .Token.TreeExe {
+    color: lime;
+}
+
+pre[class*="language-shell"] .Token.TreeIgnore {
+    color: #C1CCCC;
+} */
+pre[class*="language-shell"] .Token.HOST_NAME {
+    color: #00c867;
+}

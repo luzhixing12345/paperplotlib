@@ -1,5 +1,5 @@
 from typing import List, Union
-from .graph import Graph, check_dimensions
+from .graph import Graph
 from .color import COLOR
 import numpy as np
 
@@ -8,11 +8,8 @@ class BarGraph(Graph):
     def __init__(self) -> None:
         super().__init__()
 
-        # 柱状图宽度 [0-1] (default 0.8)
-        self.bar_width = 0.3
-        # 组间距
-        self.group_threshold = 0.15
-        # self.bar_width = 1
+        self._bar_width = 0.3  # 柱状图宽度 [0-1] (default 0.8)
+        self._group_threshold = 0.15  # 组间距
 
     def plot(self, x_data: List[Union[str, int]], y_data: List[float]):
         """
@@ -25,12 +22,14 @@ class BarGraph(Graph):
         # x 轴坐标等距
         x_ticks = range(len(x_data))
 
-        self.ax.bar(x_ticks, y_data, width=self.bar_width, color=COLOR.get(1))
+        self.ax.bar(x_ticks, y_data, width=self._bar_width, color=COLOR.get_colors(1))
 
         # x 轴标签和位置的映射
         self.ax.set_xticks(x_ticks, x_data)
 
-    def plot_2d(self, data: List[List[float]], group_names: List[str], column_names: List[str]):
+    def plot_2d(
+        self, data: List[List[float]], group_names: List[str], column_names: List[str], emphasize_index: int = -1
+    ):
         """
         绘制二维柱状图
 
@@ -40,20 +39,26 @@ class BarGraph(Graph):
         column_names: 每一列的名称
         """
         assert np.shape(data) == (len(group_names), len(column_names)), "二维数据应为二维列表"
+        if emphasize_index != -1:
+            assert (
+                type(emphasize_index) == int and emphasize_index < len(column_names) and emphasize_index >= 0
+            ), f"emphasize_index应在[0, {len(column_names)})之间"
 
         group_len = len(group_names)
         column_len = len(column_names)
 
         # 如果列数很多, 考虑到组间距, 所以重新计算一下柱状图宽度
         if column_len >= 3:
-            self.bar_width = (0.5 - self.group_threshold) / column_len * 2
+            self._bar_width = (0.5 - self._group_threshold) / column_len * 2
 
-        colors = COLOR.get(column_len)
+        colors = COLOR.get_colors(column_len, emphasize_index)
         for i in range(column_len):
             bar_pos = -column_len + 2 * i + 1
-            x_ticks = [j + bar_pos / 2 * self.bar_width for j in range(group_len)]
+            x_ticks = [j + bar_pos / 2 * self._bar_width for j in range(group_len)]
             bar_data = [data[j][i] for j in range(group_len)]
-            self.ax.bar(x_ticks, bar_data, width=self.bar_width, color=colors[i], edgecolor="black", linewidth=0.5)
+            self._bars = self.ax.bar(
+                x_ticks, bar_data, width=self._bar_width, color=colors[i], edgecolor="black", linewidth=0.5
+            )
         self.ax.set_xticks(range(group_len), group_names)
 
         # https://matplotlib.org/stable/api/legend_api.html#module-matplotlib.legend
