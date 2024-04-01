@@ -10,10 +10,19 @@ class Color:
         self.name_map = {1: "one", 2: "two", 3: "three"}
 
     def add(self, name: str, hex_groups: List[List[str]]):
-        self.colors[name] = hex_groups
+        self.colors[name[1:]] = hex_groups
+
+    def get(self, key: int, emphasize: int = None):
+        if key > 3:
+            return self.colors["others"][0]
+        else:
+            return self.colors[self.name_map[key]][0]
 
 
 def parse_colors() -> Color:
+    """
+    从 color.css 中解析颜色
+    """
     with open(os.path.join(os.path.dirname(__file__), "color.css")) as f:
         content = f.read()
 
@@ -32,4 +41,5 @@ def parse_colors() -> Color:
 
     return plot_color
 
-PLOT_COLOR = parse_colors()
+
+COLOR = parse_colors()

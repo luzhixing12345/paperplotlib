@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "paperplotlib"
-version = "0.0.0"
-description = "1"
+version = "0.0.1"
+description = "论文实验数据绘图"
 authors = ["luzhixing12345 <luzhixing12345@163.com>"]
 license = "MIT"
 readme = "README.md"
@@ -10,9 +10,9 @@ documentation = "https://luzhixing12345.github.io/paperplotlib/"
 
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.7"
 matplotlib = "^3.7.0"
-
+numpy = "^1.23.5"
 
 [build-system]
 requires = ["poetry-core"]
