@@ -25,7 +25,7 @@ class BarGraph(Graph):
         # x 轴坐标等距
         x_ticks = range(len(x_data))
 
-        self.ax.bar(x_ticks, y_data, width=self.bar_width)
+        self.ax.bar(x_ticks, y_data, width=self.bar_width, color=COLOR.get(1))
 
         # x 轴标签和位置的映射
         self.ax.set_xticks(x_ticks, x_data)
@@ -53,7 +53,7 @@ class BarGraph(Graph):
             bar_pos = -column_len + 2 * i + 1
             x_ticks = [j + bar_pos / 2 * self.bar_width for j in range(group_len)]
             bar_data = [data[j][i] for j in range(group_len)]
-            self.ax.bar(x_ticks, bar_data, width=self.bar_width, color=colors[i])
+            self.ax.bar(x_ticks, bar_data, width=self.bar_width, color=colors[i], edgecolor="black", linewidth=0.5)
         self.ax.set_xticks(range(group_len), group_names)
 
         # https://matplotlib.org/stable/api/legend_api.html#module-matplotlib.legend

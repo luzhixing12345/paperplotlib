@@ -1,28 +1,35 @@
+.cold {
+    color: #91a5d9 #607ec8 #3056b7 #0070c0 #002585 #001c64 #001242;
+}
+
+.warm {
+    color: #ffeb3b #fdd835 #fbc02d #f9a825 #f57f17;
+}
+
 .one {
-    color: #5b9bd5;
     color: #0070c0;
-    color: #2f5597;
 }
 
 .two {
-    color: #d6afb9 #7E9BB7;
-    color: #F89FA8 #F9E9A4;
-    color: #8FC9E2 #ECC97F;
-    color: #B8DDBC #F0A780;
-    color: #97C8AF #96B6D8;
+    color: #ffc000 #0070c0;
 }
 
 .three {
-    color: #9392BE #D0E7ED #D5E4A8;
-    color: #A5C496 #C7988C #8891DB;
-    color: #F1C89A #E79397 #A797DA;
-    color: #E1C855 #E07B54 #51B1B7;
+    color: #4472c4 #ffc000 #63c0cf;
 }
 
-.others {
-    color: #C6B3D3#ED9F9B#80BA8A#9CD1C8#6BB7CA;
-    color: #CC88B0#998DB7#DBE0ED#87B5B2#F4CEB4;
-    color: #F1DBE7#E0F1F7#DBD8E9#DEECD9#D0D2D4;
-    color: #9DD0C7#9180AC#D9BDD8#E58579#8AB1D2;
-    color: #EEC79F#F1DFA4#74B69F#A6CDE4#E2C8D8;
+.four {
+    color: #ffc000 #4c91b8 #0070c0 #005083;
+}
+
+.five {
+    color: #ffc000 #ed7d31 #5b9bd5 #4bbabd #358d8f;
+}
+
+.six {
+    color: #ffc000 #ed7d31 #5b9bd5 #0070c0 #4bbabd #358d8f;
+}
+
+.seven {
+    color: #ffc000 #ed7d31 #2f5597 #5b9bd5 #0070c0 #4bbabd #358d8f;
 }
