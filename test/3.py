@@ -9,7 +9,7 @@ import numpy as np
 
 # 设定数组的行数a和列数b
 a = 8  # 例如:5行
-b = 8  # 例如:3列
+b = 4  # 例如:3列
 
 # 使用numpy的random.randint函数生成一个a行b列的随机整数数组
 # 假设我们想要的随机数范围是从0到99
