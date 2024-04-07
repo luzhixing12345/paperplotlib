@@ -7,7 +7,8 @@ class Graph:
     图表
     """
 
-    def __init__(self) -> None:
+    def __init__(self, style_id: int = 1) -> None:
+        self.style_id = style_id
         self.fig = plt.figure(figsize=(8, 4))
         self.ax = self.fig.add_subplot(111)
         
@@ -32,6 +33,17 @@ class Graph:
     def plot(self, x_data: List[float], y_data: List[float]):
         """
         填入数据
+        """
+        raise NotImplementedError("请在子类中实现此方法")
+
+    def plot_2d(self, y_data: List[List[float]], group_names: List[str], column_names: List[str]):
+        """
+        绘制二维柱状图
+
+        ## Parameters
+        y_data: 二维列表,每个元素为一组数据
+        group_names: 每个组的名称
+        column_names: 每一列的名称
         """
         raise NotImplementedError("请在子类中实现此方法")
 

@@ -8,37 +8,29 @@ from typing import List, Dict, Tuple
 class Color:
 
     def __init__(self) -> None:
-        self.colors: Dict[str, List[List[str]]] = {}
-        self.key_map = {
-            1: "one",
-            2: "two",
-            3: "three",
-            4: "four",
-            5: "five",
-            6: "six",
-            7: "seven",
-        }
+        self.colors: Dict[str, Dict[int, List[str]]] = {}
 
     def add(self, name: str, hex_groups: List[List[str]]):
-        self.colors[name[1:]] = hex_groups
+        name = name[1:]
+        self.colors[name] = {}
+        for hex_group in hex_groups:
+            self.colors[name][len(hex_group)] = hex_group
 
-    def get_colors(self, color_num: int, emphasize_index: int = -1) -> List[str]:
-        
-        if emphasize_index != -1:
-            return self.get_emphasize(emphasize_index, color_num)
-        
+    def get_colors(self, color_num: int, style_id: 1, emphasize_index: int = -1) -> List[str]:
         # 对于更多颜色的情况, 采用渐变
         if color_num > 7:
-            return generate_color_gradient(self.colors["cold"][0][0], self.colors["cold"][0][1], color_num)
+            return generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
         else:
-            return self.colors[self.key_map[color_num]][0]
+            colors = self.colors[f"style-{style_id}"].get(color_num)
+            if colors is None:
+                return generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
+            return colors
 
     def get_emphasize(self, index, color_num: int) -> List[str]:
         emphasized_color = self.colors["warm"][0][0]
         colors = generate_color_gradient(self.colors["cold"][0][0], self.colors["cold"][0][1], color_num)
         colors.insert(index, emphasized_color)
         return colors
-
 
 def parse_colors() -> Color:
     """

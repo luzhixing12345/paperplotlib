@@ -9,3 +9,6 @@ test:
 cover:
 	coverage run coverage_test.py
 	coverage html
+
+all:
+	@python all.py

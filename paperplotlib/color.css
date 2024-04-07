@@ -2,34 +2,22 @@
     color: #acbcdb #012790;
 }
 
-.warm {
-    color: #ffc000 #fdd835 #fbc02d #f9a825 #f57f17;
-}
-
-.one {
+.style-1 {
     color: #0070c0;
-}
-
-.two {
     color: #ffc000 #0070c0;
-}
-
-.three {
-    color: #4472c4 #ffc000 #63c0cf;
-}
-
-.four {
+    color: #ffc000 #4472c4 #63c0cf;
     color: #ffc000 #4c91b8 #0070c0 #63c0cf;
-}
-
-.five {
     color: #ffc000 #ed7d31 #5b9bd5 #4bbabd #358d8f;
-}
-
-.six {
     color: #ffc000 #ed7d31 #5b9bd5 #0070c0 #4bbabd #358d8f;
+    color: #ffc000 #ed7d31 #2f5597 #5b9bd5 #0070c0 #4bbabd #358d8f;
 }
 
-.seven {
-    color: #ffc000 #ed7d31 #2f5597 #5b9bd5 #0070c0 #4bbabd #358d8f;
+.style-2 {
+    color: #2a6fdb;
+    color: #FEDA93 #2a6fdb;
+    color: #FEDA93 #48d6d2 #2a6fdb;
+    color: #FEDA93 #81e9e6 #48d6d2 #2a6fdb;
+    color: #FEDA93 #81e9e6 #48d6d2 #2a6fdb #122c91;
+    color: #FEDA93 #FCB24B #81e9e6 #48d6d2 #2a6fdb #122c91;
+    color: #FEDA93 #FCB24B #B56D25 #81e9e6 #48d6d2 #2a6fdb #122c91;
 }

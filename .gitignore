@@ -162,3 +162,5 @@ cython_debug/
 a.py
 .vscode/
 /*.png
+test.py
+all.py
