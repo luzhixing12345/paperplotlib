@@ -17,14 +17,11 @@ class Color:
 
     def get_colors(self, color_num: int, style_id: int = 1, emphasize_index: int = -1) -> List[str]:
         # 对于更多颜色的情况, 采用渐变
-        if color_num > 7:
-            return generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
-        else:
-            colors = self.colors[f"style-{style_id}"].get(color_num)
-            # 如果没有指定颜色, 采用渐变
-            if colors is None:
-                colors = generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
-            return colors
+        colors = self.colors[f"style-{style_id}"].get(color_num)
+        # 如果没有该数量的颜色, 采用渐变
+        if colors is None:
+            colors = generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
+        return colors
 
     def get_emphasize(self, index, color_num: int) -> List[str]:
         emphasized_color = "#ffc000"
