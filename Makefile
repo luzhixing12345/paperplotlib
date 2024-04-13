@@ -14,7 +14,7 @@ test:
 	@python test/$(i).py
 
 cover:
-	coverage run coverage_test.py
+	coverage run test.py
 	coverage html
 
 all:

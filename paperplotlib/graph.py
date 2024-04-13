@@ -29,13 +29,13 @@ class Graph:
         self.dpi = 300
         self.bbox_inches = "tight"  # 适当上下左右留白
 
-    def plot(self, x_data: List[float], y_data: List[float]):
+    def plot(self, x_data: List[float], y_data: List[float]): # pragma: no cover
         """
         填入数据
         """
         raise NotImplementedError("请在子类中实现此方法")
 
-    def plot_2d(self, y_data: List[List[float]], group_names: List[str], column_names: List[str]):
+    def plot_2d(self, y_data: List[List[float]], group_names: List[str], column_names: List[str], emphasize_index: int = -1): # pragma: no cover
         """
         绘制二维柱状图
 

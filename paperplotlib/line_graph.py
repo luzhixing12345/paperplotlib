@@ -50,14 +50,11 @@ class LineGraph(Graph):
         
         assert line_number <= len(self.all_markers), "markers 数量不足"    
         markers = self.all_markers[:line_number]
-        colors = COLOR.get_colors(line_number, self.style_id)
+        colors = COLOR.get_colors(line_number, self.style_id, emphasize_index)
         for i, y in enumerate(y_data):
             self.ax.plot(x_ticks, y, linewidth=2, label=line_names[i], marker=markers[i], markersize=5, color=colors[i])
         # x 轴标签和位置的映射
         self.ax.set_xticks(x_ticks, x_data)
-        if emphasize_index != -1:
-            self.ax.plot(x_ticks[emphasize_index], y_data[emphasize_index], marker="o", markersize=10, color="red")
-
         self.legend = self.ax.legend(
             line_names,
             loc="upper center",  # 居中置顶
