@@ -8,7 +8,7 @@ import paperplotlib as ppl
 import numpy as np
 
 # 设定数组的行数a和列数b
-a = 5
+a = 10
 b = 5
 y = np.random.rand(a, b)
 

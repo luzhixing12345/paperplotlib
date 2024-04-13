@@ -16,6 +16,8 @@ class Color:
             self.colors[name][len(hex_group)] = hex_group
 
     def get_colors(self, color_num: int, style_id: int = 1, emphasize_index: int = -1) -> List[str]:
+        if emphasize_index != -1:
+            return self.get_emphasize(emphasize_index, color_num)
         # 对于更多颜色的情况, 采用渐变
         colors = self.colors[f"style-{style_id}"].get(color_num)
         # 如果没有该数量的颜色, 采用渐变
@@ -25,7 +27,7 @@ class Color:
 
     def get_emphasize(self, index, color_num: int) -> List[str]:
         emphasized_color = "#ffc000"
-        colors = generate_color_gradient(self.colors["cold"][0][0], self.colors["cold"][0][1], color_num)
+        colors = generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
         colors.insert(index, emphasized_color)
         return colors
 
