@@ -6,6 +6,8 @@ paperplotlib 是基于 matplotlib 的论文实验数据绘图库, 意在快速�
 
 本库提供了一组 **论文实验数据图的默认样式**, 以及一组相对**简洁的 API 调用**
 
+视频介绍: [【项目分享】论文实验数据绘图](https://www.bilibili.com/video/BV1Qx421m7hx/)
+
 ## 安装
 
 ```bash
@@ -40,8 +42,6 @@ graph.save()
 ```
 
 ![](./images/paperplotlib/result.png)
-
-更多使用说明请参考: [paperplotlib 使用文档](https://luzhixing12345.github.io/paperplotlib/)
 
 ## 参考
 

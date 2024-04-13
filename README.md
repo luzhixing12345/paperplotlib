@@ -41,6 +41,10 @@ graph.save()
 
 ![](./images/paperplotlib/result.png)
 
+## 使用文档
+
+视频介绍: [【项目分享】论文实验数据绘图](https://www.bilibili.com/video/BV1Qx421m7hx/)
+
 更多使用说明请参考: [paperplotlib 使用文档](https://luzhixing12345.github.io/paperplotlib/)
 
 ## 参考
