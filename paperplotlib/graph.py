@@ -12,13 +12,12 @@ class Graph:
         self.fig = plt.figure(figsize=(8, 4))
         self.ax = self.fig.add_subplot(111)
         
-        # -- configable --
+        # -- configuation --
         self.x_label: Optional[str] = None # x轴标签
         self.y_label: Optional[str] = None # y轴标签
         self.width_picture = False # 是否是宽图
         self.grid = "y"  # 网格线 x | y | xy | None
         self.y_lim: Optional[Tuple[float, float]] = None
-        # -- configable --
 
         # 基本属性
         self.grid_color = "#dedede"  # 网格线颜色
@@ -80,6 +79,7 @@ class Graph:
             self.ax.set_ylim(self.y_lim)
         
         plt.savefig(path, dpi=self.dpi, bbox_inches=self.bbox_inches)
+        print(f"保存成功:{path}")
 
     def check_config(self):
         """

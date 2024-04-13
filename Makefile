@@ -1,6 +1,13 @@
 
 i = 1
 
+# 判断平台是 Windows 还是 Linux
+ifeq ($(OS),Windows_NT)
+RM = del
+else
+RM = rm
+endif
+
 .PHONY: test lexer cover
 
 test:
@@ -11,4 +18,7 @@ cover:
 	coverage html
 
 all:
-	@python all.py
+	@python all.py $(i)
+
+clean:
+	$(RM) *.png

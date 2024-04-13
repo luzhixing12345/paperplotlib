@@ -2,7 +2,7 @@ import re
 import os
 import numpy as np
 import matplotlib.colors as mcolors
-from typing import List, Dict, Tuple
+from typing import List, Dict
 
 
 class Color:
@@ -11,26 +11,27 @@ class Color:
         self.colors: Dict[str, Dict[int, List[str]]] = {}
 
     def add(self, name: str, hex_groups: List[List[str]]):
-        name = name[1:]
         self.colors[name] = {}
         for hex_group in hex_groups:
             self.colors[name][len(hex_group)] = hex_group
 
-    def get_colors(self, color_num: int, style_id: 1, emphasize_index: int = -1) -> List[str]:
+    def get_colors(self, color_num: int, style_id: int = 1, emphasize_index: int = -1) -> List[str]:
         # 对于更多颜色的情况, 采用渐变
         if color_num > 7:
             return generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
         else:
             colors = self.colors[f"style-{style_id}"].get(color_num)
+            # 如果没有指定颜色, 采用渐变
             if colors is None:
-                return generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
+                colors = generate_color_gradient(self.colors["cold"][2][0], self.colors["cold"][2][1], color_num)
             return colors
 
     def get_emphasize(self, index, color_num: int) -> List[str]:
-        emphasized_color = self.colors["warm"][0][0]
+        emphasized_color = "#ffc000"
         colors = generate_color_gradient(self.colors["cold"][0][0], self.colors["cold"][0][1], color_num)
         colors.insert(index, emphasized_color)
         return colors
+
 
 def parse_colors() -> Color:
     """
@@ -40,7 +41,7 @@ def parse_colors() -> Color:
         content = f.read()
 
     plot_color = Color()
-    css_classes = re.finditer(r"(.*?) \{(.*?)\}", content, re.DOTALL)
+    css_classes = re.finditer(r"\.(.*?) \{(.*?)\}", content, re.DOTALL)
     for css_class in css_classes:
         color_name = css_class.group(1).strip()
         color_values = css_class.group(2).split("\n")

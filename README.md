@@ -4,9 +4,7 @@
 
 paperplotlib 是基于 matplotlib 的论文实验数据绘图库, 意在快速绘制论文实验结果部分中常见的柱状图/折线图
 
-本库提供了一组 **论文实验数据图的默认样式**, 以及一组相对简洁的 API 调用
-
-一些绘制的示例代码和结果图见: [paperplotlib 示例](https://luzhixing12345.github.io/paperplotlib/articles/md-docs/使用示例/)
+本库提供了一组 **论文实验数据图的默认样式**, 以及一组相对**简洁的 API 调用**
 
 ## 安装
 
@@ -25,19 +23,25 @@ a = 5
 b = 7
 y = np.random.randint(10, 100, size=(a, b))
 
+# 初始化一个对象
+graph = ppl.BarGraph()
+
+# 传入数据/组/列的文字信息
 group_names = [f"group {i}" for i in range(a)]
 column_names = [f"column {i}" for i in range(b)]
-
-graph = ppl.BarGraph()
 graph.plot_2d(y, group_names, column_names)
+
+# 调整x/y轴文字
 graph.x_label = "The number of data"
 graph.y_label = "Throughput (Mbps)"
+
+# 保存图片
 graph.save()
 ```
 
 ![](./images/paperplotlib/result.png)
 
-使用文档: [paperplotlib document](https://luzhixing12345.github.io/paperplotlib/)
+更多使用说明请参考: [paperplotlib 使用文档](https://luzhixing12345.github.io/paperplotlib/)
 
 ## 参考
 
