@@ -28,6 +28,10 @@ class Graph:
         # 保存图片
         self.dpi = 300
         self.bbox_inches = "tight"  # 适当上下左右留白
+        
+        self.title: Optional[str] = None # 图表标题
+        self.font_family = "Consolas" # 字体
+        # self.colors: Optional[List[str]] = None
 
     def plot(self, x_data: List[float], y_data: List[float]): # pragma: no cover
         """
@@ -46,11 +50,12 @@ class Graph:
         """
         raise NotImplementedError("请在子类中实现此方法")
 
-    def save(self, path: str = "result.png"):
-        """
-        保存图片
-        """
-        self.check_config()
+    def _create_graph(self): # pragma: no cover
+        self._check_config()
+        
+        # set font
+        plt.rcParams["font.family"] = self.font_family
+        
         if self.width_picture:
             self.fig.set_size_inches(16, 4)
         self.ax.set_xlabel(self.x_label)
@@ -77,11 +82,25 @@ class Graph:
         
         if self.y_lim is not None:
             self.ax.set_ylim(self.y_lim)
-        
+
+        if self.title is not None:
+            self.fig.text(0.5, -0.02, self.title, ha='center', fontsize=14, weight='bold')
+
+    def _adjust_graph(self):
+        '''
+        子类中可以重写该函数来调整图表
+        '''
+
+    def save(self, path: str = "result.png"):
+        """
+        保存图片
+        """
+        self._create_graph()
+        self._adjust_graph()
         plt.savefig(path, dpi=self.dpi, bbox_inches=self.bbox_inches)
         print(f"保存成功:{path}")
 
-    def check_config(self):
+    def _check_config(self):
         """
         检查配置的属性是否设置的合理
         """

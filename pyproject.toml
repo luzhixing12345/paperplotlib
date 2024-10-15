@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "paperplotlib"
-version = "0.0.4"
+version = "0.0.5"
 description = "论文实验数据绘图"
 authors = ["luzhixing12345 <luzhixing12345@163.com>"]
 license = "MIT"

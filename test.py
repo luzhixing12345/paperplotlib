@@ -1,9 +1,15 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+
 import paperplotlib as ppl
 import unittest
 import numpy as np
 
 
-class TestMyMdParser(unittest.TestCase):
+class Test(unittest.TestCase):
     
     def test_bar_1d(self):
         x = [2, 4, 8, 16, 32]
@@ -55,6 +61,8 @@ class TestMyMdParser(unittest.TestCase):
         graph.x_label = "The number of data"
         graph.y_label = "Throughput (Mbps)"
         graph.y_lim = (0, 50)
+        graph.disable_x_ticks = True
+        graph.disable_points = True
         graph.save()
     
     def test_line_2d(self):
@@ -73,5 +81,5 @@ class TestMyMdParser(unittest.TestCase):
 
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # pragma: no cover
     unittest.main()
