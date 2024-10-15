@@ -1,3 +1,6 @@
+import matplotlib
+# 非交互式 GUI 使用 Agg
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from typing import List, Optional, Union, Tuple
 
