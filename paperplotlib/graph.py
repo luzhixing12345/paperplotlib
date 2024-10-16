@@ -2,8 +2,10 @@ import matplotlib
 # 非交互式 GUI 使用 Agg
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import os
 from typing import List, Optional, Union, Tuple
-
+from matplotlib.font_manager import FontProperties
+import matplotlib.font_manager as fm
 
 class Graph:
     """
@@ -33,7 +35,14 @@ class Graph:
         self.bbox_inches = "tight"  # 适当上下左右留白
         
         self.title: Optional[str] = None # 图表标题
-        self.font_family = "Consolas" # 字体
+        
+        font_path = f'{os.path.dirname(__file__)}/consola-1.ttf'
+        fm.fontManager.addfont(font_path)
+        plt.rcParams['font.family'] = 'Consolas'
+        # self.font_family = "Consolas" # 字体
+        # 如果是 linux 
+        # if os.name == 'posix':
+        #     self.font_family = consolas_font.get_name()
         # self.colors: Optional[List[str]] = None
 
     def plot(self, x_data: List[float], y_data: List[float]): # pragma: no cover
@@ -55,10 +64,7 @@ class Graph:
 
     def _create_graph(self): # pragma: no cover
         self._check_config()
-        
-        # set font
-        plt.rcParams["font.family"] = self.font_family
-        
+    
         if self.width_picture:
             self.fig.set_size_inches(16, 4)
         self.ax.set_xlabel(self.x_label)
