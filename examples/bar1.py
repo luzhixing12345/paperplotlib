@@ -23,4 +23,4 @@ graph.x_label = "The number of data"
 graph.y_label = "Throughput (Mbps)"
 
 # 保存图片
-graph.save()
+graph.save("bar1.png")

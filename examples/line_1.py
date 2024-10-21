@@ -13,8 +13,9 @@ x = range(100)
 
 graph = ppl.LineGraph()
 graph.plot(x,y)
+
 graph.x_label = "The number of data"
 graph.y_label = "Throughput (Mbps)"
-graph.disable_x_ticks = True
-graph.disable_points = True
+# graph.disable_x_ticks = True
+# graph.disable_points = True
 graph.save("line_1.png")

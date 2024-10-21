@@ -20,7 +20,7 @@ graph.plot_2d(x, y, line_names)
 
 graph.x_label = "The number of data"
 graph.y_label = "Throughput (Mbps)"
-graph.disable_x_ticks = True
-graph.disable_points = True
+# graph.disable_x_ticks = True
+# graph.disable_points = True
 graph.title = "Line 2"
 graph.save("line_2.png")

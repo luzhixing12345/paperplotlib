@@ -1,12 +1,10 @@
 # paperplotlib
 
-> 本项目还处于早期开发阶段, 欢迎反馈建议
-
 [![codecov](https://codecov.io/gh/luzhixing12345/paperplotlib/branch/main/graph/badge.svg?)](https://codecov.io/gh/luzhixing12345/paperplotlib)
 
-paperplotlib 是基于 matplotlib 的论文实验数据绘图库, 意在快速绘制论文实验结果部分中常见的柱状图/折线图
+paperplotlib 是基于 matplotlib 的论文实验数据绘图库, 意在快速绘制论文实验结果部分中常见的图表
 
-本库提供了一组 **论文实验数据图的默认样式**, 以及一组相对**简洁的 API 调用**
+本项目意在通过简洁的 API 调用来完成论文实验数据图的快速绘制
 
 ## 安装
 
@@ -48,6 +46,10 @@ graph.save()
 视频介绍: [【项目分享】论文实验数据绘图](https://www.bilibili.com/video/BV1Qx421m7hx/)
 
 更多使用说明请参考: [paperplotlib 使用文档](https://luzhixing12345.github.io/paperplotlib/)
+
+## 示例
+
+本仓库下的 examples/ 包含可以运行的示例, 可以在 [examples](./examples) 中查看
 
 ## 参考
 

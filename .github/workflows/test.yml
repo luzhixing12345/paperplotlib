@@ -34,6 +34,6 @@ jobs:
         COVERAGE_RUN: True
 
     - name: Upload coverage report to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v4
       with:
         file: ./coverage.xml

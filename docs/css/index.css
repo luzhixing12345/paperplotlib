@@ -17,7 +17,7 @@ body {
     -webkit-text-size-adjust: 100%;
     line-height: 1.5;
     /* color: #24292e; */
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 16px;
     letter-spacing: 0.02em;
     line-height: 1.5;
@@ -111,9 +111,10 @@ blockquote {
     margin: 0;
     margin-top: 10px;
     margin-bottom: 16px;
-    padding: 0 1em;
+    padding: 1px 1em;
     color: #6a737d;
     border-left: 0.25em solid #dfe2e5;
+    border-radius: 3px;
 }
 
 .markdown-body code,
@@ -150,7 +151,7 @@ blockquote {
 .markdown-body table,
 .markdown-body ul {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     cursor: pointer;
 }
 
@@ -376,6 +377,59 @@ ul>li>ul>li {
     margin-top: 10px;
 }
 
+.markdown-body kbd {
+    display: inline-block;
+    padding: 5px 5px;
+    font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 10px;
+    color: #444d56;
+    vertical-align: middle;
+    background-color: #fafbfc;
+    border: solid 1px #d1d5da;
+    border-bottom-color: #c6cbd1;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 -1px 0 #c6cbd1;
+    box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-light ::selection {
+    background-color: #d1ecf9;
+}
+
+.markdown-dark ::selection {
+    background-color: #3f4041;
+}
+
+.markdown-body pre code ::selection {
+    background-color: #264f78;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body .icon-note,
+.markdown-body .icon-tip,
+.markdown-body .icon-warning,
+.markdown-body .icon-important,
+.markdown-body .icon-caution,
+.markdown-body .icon-question {
+    margin-left: 0;
+    margin-right: 1%;
+    box-shadow: none;
+    /* use default display instead of block */
+    display: inline;
+}
+
+.markdown-body blockquote div {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 5px;
+}
+
 .changeMode {
     position: absolute;
     right: 50px;
@@ -390,7 +444,7 @@ ul>li>ul>li {
 }
 
 .change-article {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     border: 0;
     width: 100%;
     margin-right: 20%;
@@ -435,7 +489,7 @@ ul>li>ul>li {
 }
 
 .dir-tree {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     position: fixed;
     left: 6%;
     top: 10%;
@@ -457,7 +511,7 @@ ul>li>ul>li {
 }
 
 .dir-tree ul {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 18px;
     letter-spacing: 0.02em;
     margin-top: 25px;
@@ -477,7 +531,7 @@ ul>li>ul>li {
 }
 
 .dir-tree ul ul li {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     letter-spacing: 0.02em;
     font-size: 16px;
     margin-left: -10px;
@@ -597,7 +651,7 @@ ul>li>ul>li {
     width: 15%;
     left: 83%;
     top: 10%;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 18px;
     letter-spacing: 0.02em;
     scrollbar-width: none;
@@ -628,7 +682,7 @@ ul>li>ul>li {
 }
 
 .header-navigator ul {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: Consolas, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 14px;
     letter-spacing: 0.02em;
     margin-top: 10px;

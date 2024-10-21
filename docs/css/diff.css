@@ -1,5 +1,5 @@
 pre[class*="language-"] {
-    background: #1f1f1f;
+    background: #161b22;
 }
 
 pre[class*="language-diff"] .Token {
@@ -15,10 +15,18 @@ pre[class*="language-diff"] .Token.TAG_LINE {
     color: #C586C0;
 }
 
+pre[class*="language-diff"] .Token.HighlightLine,
+pre[class*="language-diff"] .Token.HighlightToken {
+    background-color: #2d3c4d;
+    padding: 2px 0;
+}
+
 pre[class*="language-diff"] .Token.ADD_LINE {
-    color: #A2CEA8;
+    background-color: #033a16;
+    color: #aff5b4;
 }
 
 pre[class*="language-diff"] .Token.SUB_LINE {
-    color: #CE9178;
+    background-color: #67060c;
+    color: #fad2d0;
 }

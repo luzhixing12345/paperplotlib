@@ -13,7 +13,10 @@ for(var i=0;i<inputs.length;i++) {
 }
 
 var markdown_part = document.querySelector(".markdown-body");
-
+// 在尾部添加一个 <div class="giscus"></div> 来加载 Giscus
+var giscus = document.createElement('div');
+giscus.setAttribute('class', 'giscus');
+markdown_part.appendChild(giscus);
 
 var currentUrl = window.location.href.slice(0, -1);
 var dirTree = document.querySelector(".dir-tree");

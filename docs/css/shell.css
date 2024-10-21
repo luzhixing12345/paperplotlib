@@ -1,5 +1,5 @@
 pre[class*="language-shell"] {
-    background: #1f1f1f;
+    background: #161b22;
 }
 
 pre[class*="language-shell"] .Token {
@@ -16,6 +16,12 @@ pre[class*="language-shell"] .Token.BraceDepth-1 {
 
 pre[class*="language-shell"] .Token.BraceDepth-2 {
     color: #1A9DFF;
+}
+
+pre[class*="language-shell"] .Token.HighlightLine,
+pre[class*="language-shell"] .Token.HighlightToken {
+    background-color: #2d3c4d;
+    padding: 2px 0;
 }
 
 pre[class*="language-shell"] .Token.Program,

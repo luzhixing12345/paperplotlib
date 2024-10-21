@@ -1,10 +1,8 @@
 # paperplotlib
 
-> 本项目还处于早期开发阶段, 欢迎反馈建议
+paperplotlib 是基于 matplotlib 的论文实验数据绘图库, 意在快速绘制论文实验结果部分中常见的图表
 
-paperplotlib 是基于 matplotlib 的论文实验数据绘图库, 意在快速绘制论文实验结果部分中常见的柱状图/折线图
-
-本库提供了一组 **论文实验数据图的默认样式**, 以及一组相对**简洁的 API 调用**
+本项目意在通过简洁的 API 调用来完成论文实验数据图的快速绘制
 
 视频介绍: [【项目分享】论文实验数据绘图](https://www.bilibili.com/video/BV1Qx421m7hx/)
 
@@ -41,7 +39,7 @@ graph.y_label = "Throughput (Mbps)"
 graph.save()
 ```
 
-![](./images/paperplotlib/result.png)
+![](https://raw.githubusercontent.com/luzhixing12345/paperplotlib/master/images/paperplotlib/result.png)
 
 ## 参考
 
