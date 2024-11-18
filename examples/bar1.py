@@ -7,7 +7,7 @@ import numpy as np
 
 # 随机生成一个 5 x 7 的数据
 a = 5
-b = 7
+b = 3
 y = np.random.randint(10, 100, size=(a, b))
 
 # 初始化一个对象

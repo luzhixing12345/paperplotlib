@@ -62,17 +62,7 @@ class BarGraph(Graph):
         self.ax.set_xticks(range(group_len), group_names)
         self.ax.tick_params(bottom=False)
 
-        # https://matplotlib.org/stable/api/legend_api.html#module-matplotlib.legend
-        self.legend = self.ax.legend(
-            column_names,
-            loc="upper center",  # 居中置顶
-            ncols=column_len,  # 横向排布
-            bbox_to_anchor=(0.5, 1.15),  # 置于图外侧
-            handlelength=1,  # 图例长宽, 修改为正方形
-            handleheight=1,  # 图例长宽, 修改为正方形
-            handletextpad=0.4,  # 缩短文字和图例的间距
-            fontsize="x-small" if column_len >= 7 else "medium",  # 图例文字大小
-        )
+        self.set_label_legend(column_names)
 
     def add_line(self, y: int, line_style="-"):
         self.ax.axhline(y, linestyle=line_style, linewidth=0.5, color="black")
