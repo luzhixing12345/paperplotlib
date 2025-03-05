@@ -31,7 +31,6 @@ class BarGraph(Graph):
         """
         绘制二维柱状图
 
-        ## Parameters
         data: 二维列表,每个元素为一组数据
         group_names: 每个组的名称
         column_names: 每一列的名称

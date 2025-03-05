@@ -81,5 +81,4 @@ def generate_color_gradient(hex_color1, hex_color2, num_colors):
     gradient_colors = [rgb_to_hex((r[i], g[i], b[i])) for i in range(num_colors)]
     return gradient_colors
 
-
 COLOR = parse_colors()

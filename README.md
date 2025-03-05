@@ -1,6 +1,6 @@
 # paperplotlib
 
-[![codecov](https://codecov.io/gh/luzhixing12345/paperplotlib/branch/main/graph/badge.svg?)](https://codecov.io/gh/luzhixing12345/paperplotlib)
+[![PyPI download month](https://img.shields.io/pypi/dm/paperplotlib.svg)](https://pypi.python.org/pypi/paperplotlib/) [![PyPI versionfury.io](https://badge.fury.io/py/paperplotlib.svg)](https://pypi.python.org/pypi/paperplotlib/) [![PyPI pyversions](https://img.shields.io/pypi/pyversions/paperplotlib.svg)](https://pypi.python.org/pypi/paperplotlib/) [![codecov](https://codecov.io/gh/luzhixing12345/paperplotlib/branch/main/graph/badge.svg?)](https://codecov.io/gh/luzhixing12345/paperplotlib)
 
 paperplotlib 是基于 matplotlib 的论文实验数据绘图库, 意在快速绘制论文实验结果部分中常见的图表
 

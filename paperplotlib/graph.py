@@ -13,7 +13,6 @@ class Graph:
     """
     图表
     """
-
     def __init__(self, style_id: int = 1, subplots: Tuple[int, int] = None) -> None:
         self.style_id = style_id
         self.subplots = subplots
@@ -43,7 +42,7 @@ class Graph:
 
         self.title: Optional[str] = None  # 图表标题
 
-        font_path = f"{os.path.dirname(__file__)}/consola-1.ttf"
+        font_path = f"{os.path.dirname(__file__)}/font/consola-1.ttf"
         fm.fontManager.addfont(font_path)
         plt.rcParams["font.family"] = "Consolas"
 

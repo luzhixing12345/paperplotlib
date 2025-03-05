@@ -2,13 +2,15 @@
     color: #acbcdb #012790;
 }
 
-/* Harnessing Integrated CPU-GPU System Memory for HPC: a first look into Grace Hopper */
+/* Demystifying CXL Memory with Genuine CXL-Ready Systems and Devices */
 .style-1 {
-    color: #4184f3;
-    color: #4184f3 #e94234;
-    color: #4184f3 #e94234 #fabb03;
-    color: #4184f3 #e94234 #fabb03 #33a852;
-    color: #4184f3 #e94234 #fabb03 #33a852 #46bdc5;
+    color: #0070c0;
+    color: #ffc000 #0070c0;
+    color: #ffc000 #4472c4 #63c0cf;
+    color: #ffc000 #ed7d31 #0070c0 #63c0cf;
+    color: #ffc000 #ed7d31 #5b9bd5 #4bbabd #358d8f;
+    color: #ffc000 #ed7d31 #5b9bd5 #0070c0 #4bbabd #358d8f;
+    color: #ffc000 #ed7d31 #2f5597 #5b9bd5 #0070c0 #4bbabd #358d8f;
 }
 
 .style-2 {
@@ -42,4 +44,13 @@
     color: #205898 #5c9bcf #c9cedb #dcdbc7;
     color: #205898 #5c9bcf #cee3f0 #c9cedb #dcdbc7;
     color: #205898 #5c9bcf #cee3f0 #c9cedb #dcdbc7 #d8d59c;
+}
+
+/* Harnessing Integrated CPU-GPU System Memory for HPC: a first look into Grace Hopper */
+.style-7 {
+    color: #4184f3;
+    color: #4184f3 #e94234;
+    color: #4184f3 #e94234 #fabb03;
+    color: #4184f3 #e94234 #fabb03 #33a852;
+    color: #4184f3 #e94234 #fabb03 #33a852 #46bdc5;
 }
